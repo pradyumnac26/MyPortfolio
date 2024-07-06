@@ -1,0 +1,511 @@
+baseURL: "http://localhost:1313/"
+languageCode: "en-us"
+title: "Hugo Profile"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+#Menus:
+  #main:
+   # - identifier: blog
+   #   name: Blog
+   #   title: Blog posts
+    #  url: /blogs
+    #  weight: 1
+   # - identifier: gallery
+    #  name: Gallery
+    #  title: Blog posts
+    #  url: /gallery
+    #  weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  image: "/images/projects/icon.png"
+  title: "My Profile"
+  description: Text about my cool site
+
+  # staticPath: ""  # The path to serve the static files from
+  #favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # When using hex codes for colors, quotations must be used along with the # sign
+  # color:
+  #   textColor: "#343a40"
+  #   secondaryTextColor: "#6c757d"
+  #   backgroundColor: "#eaedf0"
+  #   secondaryBackgroundColor: "#64ffda1a"
+  #   primaryColor: "#007bff"
+  #   secondaryColor: "#f8f9fa"
+
+  #   darkmode:
+  #     textColor: "#e4e6eb"
+  #     secondaryTextColor: "#b0b3b8"
+  #     backgroundColor: "#18191a"
+  #     secondaryBackgroundColor: "#212529"
+  #     primaryColor: "#ffffff"
+  #     secondaryColor: "#212529"
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "MyPortfolio"
+    brandLogo: "/images/projects/icon.png" # Logo for the brand
+    showBrandLogo: true # Brand name for the brand | default is the title variable
+    disableSearch: false
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Pradyumna "
+    subtitle: "Software Developer" 
+    content: "I'm a Computer Science grad student at CU Boulder with 2.3 years of experience as a Software Engineer.  Love developing products and solutions that positively impact the society"
+    image: /images/projects/hero.png
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Resume"
+      url: https://drive.google.com/file/d/1cYejUhF5jPIbOegbZHUk92W8KptcRzoq/view?usp=sharing
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/pradyumnac26
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/pradyumna-c-a652b117a/
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: /images/projects/text2.jpg
+    content: |-
+      I am Pradyumna (pronounced “Prad-You-Mna”), currently pursuing a Master's in Computer Science from the University of Colorado Boulder. I have a profound passion for technology and a strong foundation in Software Development. I thrive on leading impactful projects and continuously seek knowledge and growth, particularly in leveraging cutting-edge technologies to drive innovation and deliver tangible results. I am currently delving into Generative AI, earning AWS Certifications, and exploring GraphQL, Ruby on Rails, and Go.
+
+      With 2.3 years of professional experience, I have held positions from Software Engineer to Release Manager. I conducted a 3-day workshop for over 30 employees at Societe Generale on good coding practices, Git, and .NET. In my free time, I enhance my skills by participating in coding contests and hackathons, and by reading technical blogs and papers. When i am away from keyboard, I enjoy playing sports, listening to music, reading books, traveling, and painting.
+
+    skills:
+      enable: true
+      title: "I specialize in the following skills"
+      items:
+        - "Full Stack Developement"
+        - "Devops"
+        - "Deep Learning and Neural Networks"
+        - "Desktop Developement"
+
+
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Software Engineer"
+        company: "Societe Generale"
+        companyUrl: "https://www.societegenerale.com/en"
+        date: "Jul 2021 - jul 2023"
+        image: /images/projects/socgen.jpg
+        info: 
+          enable: false
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+          Worked as a software engineer in the Forex Front Office team, contributing to the development and optimization of a full-stack banking application.
+          
+          Responsibilities include:
+
+          - Adhering to Agile methodology involving Scrum, Backlog Grooming, Sprint Planning and Retrospection.
+
+          - Working in a TDD based Environment
+
+          - Analysing Business requirement and Estimation 
+
+          - Troubleshooting, Debugging, Designing and Programming and Documenting 
+
+          - Writing Unit Tests(UTs)
+
+          - Non-Regression Testing 
+
+          - Release Management and Patch Management activities 
+
+          - Software Factory Management 
+
+          - Code Review for the team .
+
+          - PROD support to the users with immediate fix to PROD issues
+
+      - job: "Software Engineer Intern"
+        company: "Robert Bosch "
+        companyUrl: "https://www.bosch.us/"
+        date: "Apr 2021 - June 2021"
+        image: /images/projects/bosch.png
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+          Interned in the 2 Wheel power train department, focusing on the Indoor Positioning system project.
+
+          Responsibilities include:
+
+          - Algorithm Development for Indoor Positioning System.
+          - Sensor Data processing, filtering and calibration.
+          - Hardware and Software Integration.
+          - App Development.
+
+      - job: "AI Research Intern"
+        company: "WIRIN"
+        companyUrl: "https://wirin.iisc.ac.in/"
+        date: "June 2017 - Nov 2019"
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+          Interned for 5 momnths as AI Research Assistant. Led the Global AI team in developing model for object detection for driverless cars.
+
+          Responsibilities include: 
+          - REST API implementation.
+          - Development of R-CNN model for object detection for driverless cars.
+
+      - job: "Python Intern"
+        company: "DRDO"
+        date: "Feb 2016 - Mar 2017"
+        content: | 
+          Interned at DRDO as Python Developer.
+
+          Responsibilities include:
+          - Collision avoidance and Path Planning Algorithm simulation and implementation for unmanned surface vehicles.
+          - Techincal Documentation.
+
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Master of Science in Computer Science"
+        school:
+          name: "University of Colorado Boulder"
+          url: "https://www.colorado.edu/"
+        date: "2023 - 2025"
+        GPA: "3.88 out of 4.0"
+        image: /images/projects/cub.png
+        content: |-
+          Coursework
+            - Design and Analysis of Algorithms
+            - Data Mining
+            - Deep Learning and Neural Networks
+            - Big Data Architecture 
+            - Foundations of Software Engineering
+            - Cybersecurity
+            - Data Center Scale Computing 
+            - Professional Project
+
+          Extracurricular Activities
+            - Actively participated in university hackathons and coding contests, securing 3rd place in the AWS JAM hackathon.
+            - Organized and volunteered in HINDU YUVA events fostering community engagment and cultural awareness.
+
+        featuredLink:
+          enable: true
+          name: "Transcript"
+          url: "https://drive.google.com/file/d/1I9XrSgYRyCAV3xxcpG2RxJNXAh9ewnFx/view?usp=sharing"
+
+      - title: "Bachelor of Science in Electronics and Communication Engineering"
+        school:
+          name: "R V College of Engineering"
+          url: "https://www.rvce.edu.in/"
+        date: "2017 - 2021"
+        GPA: "8.48 out of 10.0"
+        image: /images/projects/rv.png
+        content: |-
+          Coursework
+            - Programming in C
+            - Computer Networks
+            - Graph Theory
+            - Computer Architecture (Embedded System Design)
+            - Introduction to Web Programming
+
+          Extracurricular Activities
+            - Led the Production and Design (P&D) team during the college fest, overseeing event coordination, logistics, and execution.
+            - As a part of the Coding Club, mentored students on key technical and professional skills through workshops and personalized guidance..
+        featuredLink:
+          enable: true
+          name: "Transcript"
+          url: "https://drive.google.com/file/d/1IGZFblkLPVpJJnSPgkCXT28JkG_kX6wG/view?usp=sharing"
+
+  # Achievements
+  achievements:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Infosys Summer of Ideas 2020
+        content: Participated in Infosys - Summer of Ideas Ideathon and secured in the top 5 ranks for proposing a solution to a real-world problem in inventory management.
+        image: /images/projects/info.png
+      - title: Certifications
+        content: AWS Jam Hackathon - Developed solutions for various problems using AWS services
+        image: /images/projects/coursera1.png
+      - title: NPTEL top 2%
+        content: Secured NPTEL Elite medal for securing top 2% in the course
+        image: /images/projects/nptel1.png
+      - title: AWS Hackathon - 3rd place
+        content: AWS Jam Hackathon - Developed solutions for various problems using AWS services
+        image: /images/projects/aws1.jpg
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Trail Xplorer
+        content: Full Stack Application for hikers to explore trails across the US.
+        image: /images/projects/bda.png
+        featured:
+          name: Demo
+          link: https://youtu.be/RoGIIJJm6Z4?si=FptuvwcQ3p4zL_6Y
+        badges:
+          - "React"
+          - "Flask"
+          - "Docker"
+          - "AWS"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pradyumnac26/TrailXplorer
+
+
+      - title: Leasey 
+        content: A Sublease portal that helps landlords manage and find subleases.
+        image: /images/projects/leasey.png
+        featured:
+          name: Demo
+          link: https://youtu.be/HO9593NK9HA?si=06e2pXHfEV2vSFuV
+        badges:
+          - "React"
+          - "Node.js"
+          - "Google Cloud"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pradyumnac26/Leasey
+
+      - title: EmoTune
+        content: Emotion based music recommendation system to suggest songs based on your mood.
+        image: /images/projects/DL.png
+        featured:
+          name: Poster
+          link: https://drive.google.com/file/d/1ryqruHq14AW4ocyPMKP5qgQsiugUkqNx/view?usp=sharing
+        badges:
+          - "Computer Vision"
+          - "API Integration"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pradyumnac26/Emotion_based_playlist
+        
+      - title: Asset Register System
+        content: A backend microservice application to track all platfrom/systems in the company.
+        image: /images/projects/ars.png
+        featured:
+          name: Demo
+          link: https://youtu.be/bMI0LzB345k?si=9tI6yxJK3GcX-lvN
+        badges:
+          - ".NET Framework"
+          - "Kubernetes"
+          - "RabbitMQ"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pradyumnac26/AssetRegister
+
+      - title: Fake News Detection
+        content: Application to detect fake news using Machine Learning and NLP.
+        image: /images/projects/fake1.png
+        featured:
+          name: Demo
+          link: https://youtu.be/bMI0LzB345k?si=9tI6yxJK3GcX-lvN
+        badges:
+          - "Machine Learning"
+          - "NLP"
+          - "Javascript"
+          - "Flask"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/giriteja94495/Fake-and-spam-news-detection-using-flask-app/tree/main
+
+      - title: e-Commerce Website
+        content: Microservice based online shopping platform built using MERN stack.
+        image: /images/projects/ec.png
+        badges:
+          - "React"
+          - "MongoDB"
+          - "Node.js"
+          - "Express"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pradyumnac26/react-shopping-cart
+
+      - title: Twitter Sentiment Analysis
+        content: Developed a system to analyze and classify tweets, providing real-time insights into public opinion and trends based on sentiment.
+        image: /images/projects/tsa.png
+        featured:
+          name: Report
+          link: https://drive.google.com/file/d/1N1FLhzjBUKunR4K2ReCyhePm-5lYDVLq/view?usp=sharing
+        badges:
+          - "Machine Learning"
+          - "NLP"
+          - "API Integration"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pradyumnac26/Twitter-Sentiment-Analysis
+
+      - title: Employee Attrition Prediction
+        content: Built a predictive model using IBM dataset to identify patterns to help aid retention strategies.
+        image: /images/projects/eap.png
+        featured:
+          name: Paper
+          link: https://docs.google.com/document/d/1mfahFEFQxWmKX2zgAFdrmSYJrCyNNpcvGuzxAq43cF8/edit?usp=sharing
+        badges:
+          - "Machine Learning"
+          - "Data Analytics"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pradyumnac26/Employee-Attrition-Prediction
+
+      - title: Stock Market Charting
+        content: A Full Stack Stock Market Application to track stock prices and trends.
+        image: /images/projects/stock.png
+        badges:
+          - "Angular"
+          - ".NET Framework"
+          - "SQL"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pradyumnac26/Stock-Market-Charting
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: You can reach out to me here for queries or collaborations.
+    btnName: Mail me
+    btnLink: mailto:chippigiripradyumna@gmail.com
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+    #   messageRows: 5
+
+  footer:
+    socialNetworks:
+      github: https://github.com/pradyumnac26
+      linkedin: https://www.linkedin.com/in/pradyumna-c-a652b117a/
+      instagram: https://www.instagram.com/im_praddy/
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
